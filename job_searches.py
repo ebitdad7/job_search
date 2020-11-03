@@ -107,7 +107,7 @@ def extract_company_indeed(job_elem):
 
 def extract_link_indeed(job_elem):
     link = job_elem.find('a')['href']
-    link = 'www.Indeed.co.uk/' + link
+    link = 'www.Indeed.com/' + link
     return link
 
 def extract_date_indeed(job_elem):
