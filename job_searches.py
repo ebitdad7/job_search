@@ -42,6 +42,11 @@ def save_jobs_to_excel(jobs_list, filename):
 
 ## ================== FUNCTIONS FOR INDEED =================== ##
 
+
+## ============ This defines the URL to load the jobs ============ ##
+#You can further change this by replacing the url with the url of your choice
+
+## remember to make sure the format is correct. Notice the url used can be different depending on where you are located.
 def load_indeed_jobs_div(job_title, location):
     getVars = {'q' : job_title, 'l' : location, 'fromage' : 'last', 'sort' : 'date'}
     url = ('https://www.indeed.com/jobs?' + urllib.parse.urlencode(getVars))
@@ -50,6 +55,7 @@ def load_indeed_jobs_div(job_title, location):
     job_soup = soup.find(id="resultsCol")
     return job_soup
 
+### This extracts the main data I wanted to pull. If you add descriptions you can get some interesting results.
 def extract_job_information_indeed(job_soup, desired_characs):
     job_elems = job_soup.find_all('div', class_='jobsearch-SerpJobCard')
      
