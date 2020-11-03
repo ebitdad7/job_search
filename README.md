@@ -26,3 +26,5 @@ I also recommend installing PandasGUI if you would like to later incorporate wor
 ``` bash
 $ pip install pandasgui
 ```
+
+You can learn more about PandasGUI [here](https://github.com/adamerose/pandasgui)
